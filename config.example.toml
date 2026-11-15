@@ -1,0 +1,31 @@
+# 复制本文件到框架的插件配置目录，改名为 config.toml
+
+[plugin]
+# 是否启用 App 网关（关闭后不监听端口）
+enabled = true
+
+[server]
+# 监听地址。0.0.0.0 才能被手机访问；只本机调试可改 127.0.0.1
+host = "0.0.0.0"
+# 监听端口（框架核心通常只绑 127.0.0.1，手机连不上，所以这里单独起一个）
+port = 8100
+# Bearer Token。留空则自动生成并保存到 data/neo_app_gateway/token.txt
+token = ""
+allow_origins = ["*"]
+
+[bridge]
+# App 用户的稳定 ID（决定 stream_id，避免每次重启都换一条对话流）
+user_id = "100000000"
+# 她在提示词里看到的你的名字
+nickname = "你"
+# 她在 App / 空间里显示的名字
+her_name = "她"
+# 迁移来源平台（从该平台的会话文件复制上下文到新流时用）
+upstream_platform = "qq"
+
+[push]
+# ntfy 离线推送：App 未连接时把「她找你」推到手机通知栏
+ntfy_enabled = false
+ntfy_url = "https://ntfy.sh"
+# 主题名相当于密码，用随机长串
+ntfy_topic = ""

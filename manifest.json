@@ -1,0 +1,53 @@
+{
+  "name": "neo_app_gateway",
+  "display_name": "自建 App 网关",
+  "version": "0.1.0",
+  "description": "为自建聊天 App 提供 WebSocket 接入：入站消息喂给框架聊天流（由 KFC 处理），出站回复推送给 App。platform=app，与 QQ 适配器天然隔离。",
+  "author": "local",
+  "license": "MIT",
+  "categories": ["chat"],
+  "dependencies": {
+    "plugins": [],
+    "components": []
+  },
+  "include": [
+    {
+      "component_type": "adapter",
+      "component_name": "app_adapter",
+      "dependencies": []
+    },
+    {
+      "component_type": "config",
+      "component_name": "config",
+      "dependencies": []
+    },
+    {
+      "component_type": "tool",
+      "component_name": "qzone_read",
+      "dependencies": []
+    },
+    {
+      "component_type": "tool",
+      "component_name": "qzone_post",
+      "dependencies": []
+    },
+    {
+      "component_type": "tool",
+      "component_name": "qzone_like",
+      "dependencies": []
+    },
+    {
+      "component_type": "tool",
+      "component_name": "qzone_comment",
+      "dependencies": []
+    }
+  ],
+  "entry_point": "plugin.py",
+  "api_version": {
+    "adapter_api": "1.0.0",
+    "chat_api": "1.0.0",
+    "log_api": "1.0.0"
+  },
+  "python_dependencies": [],
+  "dependencies_required": true
+}
