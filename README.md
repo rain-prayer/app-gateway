@@ -1,5 +1,7 @@
 # app-gateway · 给聊天机器人接一个自己写的 App
 
+> 镜像仓库：[Gitee](https://gitee.com/rainprayer/app-gateway) ｜ [GitHub](https://github.com/rain-prayer/app-gateway)
+
 > 运行在开源机器人框架 **[Neo-MoFox](https://github.com/)** 上的第三方插件，**不是独立应用**。
 > 框架本身不是我写的，本仓库只包含我编写的网关插件；配套客户端见 **[bubble-app](https://gitee.com/rainprayer/bubble-app)**。
 
